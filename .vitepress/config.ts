@@ -2,21 +2,22 @@ import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "rengar-admin",
+  title: "rengar-admin文档",
   description: "开发文档",
   base: "/rengar-admin-doc/",
+
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: "Home", link: "/" },
-      { text: "Examples", link: "/markdown-examples" },
+      { text: "首页", link: "/" },
+      { text: "文档", link: "/start/introduction" },
     ],
 
     sidebar: [
       {
-        text: "Examples",
+        text: "开始",
         items: [
-          { text: "Markdown Examples", link: "/markdown-examples" },
+          { text: "简介", link: "/start/introduction" },
           { text: "Runtime API Examples", link: "/api-examples" },
         ],
       },
