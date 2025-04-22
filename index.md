@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: "rengar-admin文档"
-  text: "rengar-admin开发文档"
-  tagline: My great project tagline
+  name: "rengar-admin"
+  text: "开发文档"
+
   actions:
     - theme: brand
       text: Markdown Examples
@@ -22,4 +22,3 @@ features:
   - title: Feature C
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
-
