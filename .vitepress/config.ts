@@ -16,15 +16,12 @@ export default defineConfig({
     sidebar: [
       {
         text: "开始",
-        items: [
-          { text: "简介", link: "/start/introduction" },
-          { text: "Runtime API Examples", link: "/api-examples" },
-        ],
+        items: [{ text: "简介", link: "/start/introduction" }],
       },
     ],
 
     socialLinks: [
-      { icon: "github", link: "https://github.com/vuejs/vitepress" },
+      { icon: "github", link: "https://github.com/RengarJS/rengar-admin" },
     ],
   },
 });

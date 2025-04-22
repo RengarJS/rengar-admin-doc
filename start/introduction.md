@@ -1,21 +1,20 @@
+## 简介
+
+- `rengar-admin`是基于[naive-ui](https://www.naiveui.com)开发的一个**后台管理模板**， 无需专注与框架的架构，专注于业务代码。
+
 ## 为什么开发 rengar-admin
 
-- `rengar-admin`是基于[naive-ui](https://www.naiveui.com)开发的一个**后台管理模板**， 无需专注与框架的架构，只管专心写业务代码。
+目前市面上的很多后台模版存在臃肿、过渡封装问题，实际开发中可能并不需要那么多的功能，去改源码是一件很痛苦的事情。于是，决定自己实现一个轻量的后台模版，于是`rengar-admin`就诞生了。
+
+`rengar`一词来源于 lol 的英雄雷恩加尔的英文名称，以前很喜欢玩这个英雄。
 
 ## 不适合 rengar-admin 的人群
 
 - 不喜欢 ts 或不熟悉 ts
 - 需要`国际化`方案，`rengar-admin`没有国际化方案
 - 不喜欢`unocss`
+- 需要内置很多复杂功能的用户，`rengar-admin`主打的是轻量、简介，只提供基本的功能，如果需要复杂功能，请自行实现或者使用其他模版
 
-## 技术栈
+## 灵感
 
-- [vue3](https://cn.vuejs.org/)： 一个渐进式 JavaScript 框架
-- [vite](https://vitejs.dev/)： 一个快速的前端构建工具，支持热模块替换和按需加载
-- [typescript](https://www.typescriptlang.org/)： 一种 JavaScript 的超集，支持类型检查和编译
-- [naive-ui](https://www.naiveui.com/)： 一个轻量、可定制、可扩展的 UI 组件库
-- [vue-router](https://router.vuejs.org)： 一个官方的 vue 路由管理库
-- [pinia](pinia.vuejs.org)： 一个简单、可扩展的状态管理库
-- [unocss](https://unocss.dev)： 轻量级、可扩展的、可定制的、可复用的原子 CSS 引擎
-- [pnpm](https://pnpm.io)： 一个快速、安全的、可管理的包管理工具
-<!-- - [es-toolkit](https://es-toolkit.slash.page/)： 一个轻量级、可扩展的、可定制的、可复用的工具库 -->
+灵感来自于[soybean-admin](https://admin-docs.soybeanjs.cn/)，是一个很好看的后台模版，用它也是一个不错的选择。
