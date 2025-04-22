@@ -1,4 +1,6 @@
-## 简介
+# 简介
+
+## 介绍
 
 - `rengar-admin`是基于[naive-ui](https://www.naiveui.com)开发的一个**后台管理模板**， 无需专注与框架的架构，专注于业务代码。
 
@@ -8,11 +10,9 @@
 
 `rengar`一词来源于 lol 的英雄雷恩加尔的英文名称，以前很喜欢玩这个英雄。
 
-## 不适合 rengar-admin 的人群
+## 不适合使用 rengar-admin 的情况
 
-- 不喜欢 ts 或不熟悉 ts
-- 需要`国际化`方案，`rengar-admin`没有国际化方案
-- 不喜欢`unocss`
+- 需要`国际化`方案，`rengar-admin`没有实现国际化方案，如果你想要实现国际化方案，不妨看看[soybean-admin](https://admin-docs.soybeanjs.cn/)
 - 需要内置很多复杂功能的用户，`rengar-admin`主打的是轻量、简介，只提供基本的功能，如果需要复杂功能，请自行实现或者使用其他模版
 
 ## 灵感
