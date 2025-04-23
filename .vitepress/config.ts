@@ -19,6 +19,7 @@ export default defineConfig({
         items: [
           { text: "简介", link: "/start/introduction" },
           { text: "快速开始", link: "/start/quik-start" },
+          { text: "monorepo", link: "/start/monorepo" },
           { text: "同步代码", link: "/start/sync" },
         ],
       },
