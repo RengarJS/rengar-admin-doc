@@ -18,7 +18,8 @@ export default defineConfig({
         text: "开始",
         items: [
           { text: "简介", link: "/start/introduction" },
-          { text: "快速开始", link: "/start/start" },
+          { text: "快速开始", link: "/start/quik-start" },
+          { text: "同步代码", link: "/start/sync" },
         ],
       },
     ],

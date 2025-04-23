@@ -2,7 +2,7 @@
 
 ## 介绍
 
-- `rengar-admin`是基于[naive-ui](https://www.naiveui.com)开发的一个**后台管理模板**， 无需专注与框架的架构，专注于业务代码。
+- `rengar-admin`是基于[naive-ui](https://www.naiveui.com)开发的一个**后台管理模板**， 无需专注与框架的架构，专注于业务开发。
 
 ## 为什么开发 rengar-admin
 
