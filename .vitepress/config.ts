@@ -22,6 +22,11 @@ export default defineConfig({
           { text: "同步代码", link: "/start/sync" },
         ],
       },
+
+      {
+        text: "功能说明",
+        items: [{ text: "目录结构", link: "/action/directory" }],
+      },
     ],
 
     socialLinks: [

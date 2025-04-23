@@ -1,5 +1,11 @@
 # 快速开始
 
+## 环境要求
+
+- [node.js](https://nodejs.org/): >= 20
+- [pnpm](https://pnpm.io/): >= 9
+- [git](https://git-scm.com/)
+
 ## 创建项目
 
 ```bash
