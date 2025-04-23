@@ -1,0 +1,1 @@
+import{_ as t,c as a,o as i,ae as o}from"./chunks/framework.DDmtCRY9.js";const _=JSON.parse('{"title":"同步代码","description":"","frontmatter":{},"headers":[],"relativePath":"start/sync.md","filePath":"start/sync.md"}'),s={name:"start/sync.md"};function c(n,e,r,l,d,p){return i(),a("div",null,e[0]||(e[0]=[o("",6)]))}const g=t(s,[["render",c]]);export{_ as __pageData,g as default};
