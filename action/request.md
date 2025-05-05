@@ -84,6 +84,6 @@ const baseHttp = new HttpClient({
 export { baseHttp };
 ```
 
-## 多 个后端 api
+## 多个后端 api
 
 如果你的项目有多个 api，你需要根据不同的 api 来创建不同的`BaseHttpClient`实例，然后在不同的地方使用不同的实例。至于多个 api 的地址自行在环境变量里维护。
