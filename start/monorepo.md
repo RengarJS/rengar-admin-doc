@@ -1,5 +1,7 @@
 # monorepo 介绍
 
+请先阅读[pnpm monorepo](https://pnpm.io/zh/workspaces)详解。
+
 `monorepo` 是一个概念，它代表一个仓库中包含多个子项目，这些子项目可以共享相同的依赖，也可以共享相同的构建工具。本项目里使用基于`pnpm`的`monorepo 能力。
 
 pnpm 使用`monorepo`架构只需在根目录新建`pnpm-workspace.yaml`，`rengar-admin`的配置如下：
@@ -17,4 +19,8 @@ packages:
 由于使用了`monorepo`，安装依赖有所不同，以下是安装依赖的示例：
 
 - 安装`dayjs`到根目录，执行`pnpm add dayjs -w`，`-w`表示安装到根目录。
-- 安装`dayjs`到`packages/axios`，
+- 安装`dayjs`到`packages/axios`，在根目录执行`pnpm add dayjs -F packages/axios`
+
+::: tip
+在根目录安装的 npm 包，所有子项目都可以使用，在子项目安装的 npm 包，只有该子项目可以使用。
+:::

@@ -5,7 +5,9 @@ export default defineConfig({
   title: "rengar-admin文档",
   description: "开发文档",
   base: "/rengar-admin-doc/",
-
+  markdown: {
+    lineNumbers: true,
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -26,7 +28,14 @@ export default defineConfig({
 
       {
         text: "功能说明",
-        items: [{ text: "目录结构", link: "/action/directory" }],
+        items: [
+          { text: "目录结构", link: "/action/directory" },
+          { text: "颜色", link: "/action/color" },
+          { text: "图标", link: "/action/icon" },
+          { text: "请求", link: "/action/request" },
+          { text: "路由系统", link: "/action/router" },
+          { text: "权限系统", link: "/action/auth" },
+        ],
       },
     ],
 
