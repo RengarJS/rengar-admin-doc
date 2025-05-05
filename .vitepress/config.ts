@@ -13,6 +13,7 @@ export default defineConfig({
     nav: [
       { text: "首页", link: "/" },
       { text: "文档", link: "/start/introduction" },
+      { text: "在线预览", link: "https://rengarjs.github.io/rengar-admin/" },
     ],
 
     sidebar: [
@@ -41,7 +42,11 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: "github", link: "https://github.com/RengarJS/rengar-admin" },
+      {
+        icon: "github",
+        ariaLabel: "github",
+        link: "https://github.com/RengarJS/rengar-admin",
+      },
     ],
   },
 });

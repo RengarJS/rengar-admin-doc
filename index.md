@@ -11,8 +11,8 @@ hero:
       text: 快速开始
       link: /start/introduction
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: 在线预览
+      link: https://rengarjs.github.io/rengar-admin/
 
 features:
   - title: 优势
