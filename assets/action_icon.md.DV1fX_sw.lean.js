@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as e,ae as t}from"./chunks/framework.DDmtCRY9.js";const k=JSON.parse('{"title":"图标","description":"","frontmatter":{},"headers":[],"relativePath":"action/icon.md","filePath":"action/icon.md"}'),l={name:"action/icon.md"};function n(p,s,h,o,r,d){return e(),a("div",null,s[0]||(s[0]=[t("",9)]))}const g=i(l,[["render",n]]);export{k as __pageData,g as default};

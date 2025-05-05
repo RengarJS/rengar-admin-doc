@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as n,ae as t}from"./chunks/framework.DDmtCRY9.js";const o=JSON.parse('{"title":"权限系统","description":"","frontmatter":{},"headers":[],"relativePath":"action/auth.md","filePath":"action/auth.md"}'),e={name:"action/auth.md"};function l(h,s,p,k,r,d){return n(),a("div",null,s[0]||(s[0]=[t("",8)]))}const c=i(e,[["render",l]]);export{o as __pageData,c as default};
