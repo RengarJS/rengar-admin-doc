@@ -8,67 +8,82 @@
 
 ## request 封装
 
-`renga-admin`基于`axios`封装了一个基本的**抽象类**，代码位于`packages/axios/index.ts`中，代码如下：
+因为后端的规范是各式各样的，所以`renga-admin`提供了一个**抽象类**，你可以继承这个抽象类，然后重写`initializeRequestInterceptor`和`initializeResponseInterceptor`方法，来实现自己的请求拦截器和响应拦截器。
+
+`rengar-admin`的示例请求的自定义请求拦截如下，你可以根据后端的实际情况来实现自己的请求拦截器
 
 ```ts
-import axios from "axios";
-import type {
-  AxiosInstance,
-  AxiosRequestConfig,
-  CancelTokenSource,
-} from "axios";
+import BaseHttpClient from "@rengar-admin/axios";
+import type { AxiosRequestConfig } from "axios";
+import { useRouterHook } from "@/hooks/router";
+import { useAuthStore } from "@/stores";
+import router from "@/router";
 
-abstract class BaseHttpClient {
-  protected instance: AxiosInstance;
-  protected requestInterceptor: number;
-  protected responseInterceptor: number;
-  protected cancelTokenSource: CancelTokenSource;
+function showErrorMessage(message: string) {
+  window.$message.error(message);
+}
 
+class HttpClient extends BaseHttpClient {
   constructor(config: AxiosRequestConfig) {
-    this.cancelTokenSource = axios.CancelToken.source();
-    this.instance = axios.create({
-      ...config,
-      cancelToken: this.cancelTokenSource.token,
-    });
-    this.requestInterceptor = this.initializeRequestInterceptor();
-    this.responseInterceptor = this.initializeResponseInterceptor();
+    super(config);
   }
 
-  protected abstract initializeRequestInterceptor(): number;
-  protected abstract initializeResponseInterceptor(): number;
-
-  public async get<T>(url: string, config?: AxiosRequestConfig): Promise<T> {
-    return this.instance.get<T>(url, config) as Promise<T>;
-  }
-
-  public async post<T>(
-    url: string,
-    data?: Recordable,
-    config?: AxiosRequestConfig
-  ): Promise<T> {
-    return this.instance.post<T>(url, data, config) as Promise<T>;
-  }
-
-  public async request<T>(config: AxiosRequestConfig): Promise<T> {
-    return this.instance.request<T>(config) as Promise<T>;
-  }
-
-  public async upload<T>(
-    url: string,
-    file: File,
-    config?: AxiosRequestConfig
-  ): Promise<T> {
-    const formData = new FormData();
-    formData.append("file", file);
-
-    return this.instance.post<T>(url, formData, {
-      headers: {
-        "Content-Type": "multipart/form-data",
+  protected initializeRequestInterceptor(): number {
+    return this.instance.interceptors.request.use(
+      (config) => {
+        const authStore = useAuthStore();
+        if (authStore.user.token) {
+          config.headers.Authorization = `Bearer ${authStore.user.token}`;
+        }
+        return config;
       },
-      ...config,
-    }) as Promise<T>;
+      (error) => {
+        return Promise.reject(error);
+      }
+    );
+  }
+
+  private handleUnauthorized(message: string = "未授权，请重新登录") {
+    const { routerReplaceToLogin } = useRouterHook(false);
+    this.cancel();
+    showErrorMessage(message);
+    const authStore = useAuthStore();
+    authStore.reset();
+    routerReplaceToLogin(router.currentRoute.value.fullPath);
+    return Promise.reject(new Error(message));
+  }
+
+  protected initializeResponseInterceptor(): number {
+    return this.instance.interceptors.response.use(
+      (response) => {
+        if (response.status === 200 && response.data.code === "000000") {
+          return response.data.data;
+        } else if (response.data.code === "401") {
+          return this.handleUnauthorized();
+        } else {
+          showErrorMessage(response.data.msg || "请求失败");
+          return Promise.reject(new Error(response.data.msg || "请求失败"));
+        }
+      },
+      (error) => {
+        if (error.response?.status === 401) {
+          return this.handleUnauthorized();
+        }
+        showErrorMessage("请求失败");
+        return Promise.reject(error);
+      }
+    );
   }
 }
 
-export default BaseHttpClient;
+const baseHttp = new HttpClient({
+  baseURL: import.meta.env.VITE_API_URL,
+  timeout: 1000 * 10,
+});
+
+export { baseHttp };
 ```
+
+## 多 个后端 api
+
+如果你的项目有多个 api，你需要根据不同的 api 来创建不同的`BaseHttpClient`实例，然后在不同的地方使用不同的实例。至于多个 api 的地址自行在环境变量里维护。
