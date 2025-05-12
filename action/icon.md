@@ -8,7 +8,8 @@
    ```vue
    <SvgIcon icon="i-ri-home-3-line" />
    ```
-2. 使用`class`的方式引入：
+   `SvgIcon`会自动引入，无需手动引入
+1. 使用`class`的方式引入：
    ```vue
    <i class="i-ri-home-3-line"></i>
    ```

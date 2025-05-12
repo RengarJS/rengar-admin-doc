@@ -37,6 +37,7 @@ export default defineConfig({
           { text: "请求", link: "/action/request" },
           { text: "路由系统", link: "/action/router" },
           { text: "权限系统", link: "/action/auth" },
+          { text: "环境变量", link: "/action/env" },
         ],
       },
     ],

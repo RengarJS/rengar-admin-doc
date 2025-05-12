@@ -4,13 +4,13 @@
 
 示例 api 是基于[apiFpx](https://apifox.com/)的 mock 的，所有的 CRUD 接口都没有实际的效果，仅仅只是为了演示。
 
-[点击查看示例文档](https://apifox.com/apidoc/shared/86037536-a9a1-453b-9bcf-28ff484cc199)，密码为`rengar-admin`，此文档会更新密码。
+[点击查看示例文档](https://apifox.com/apidoc/shared/86037536-a9a1-453b-9bcf-28ff484cc199)，密码为`rengar-admin`，此文档会不定期更新密码。
 
 ## request 封装
 
-因为后端的规范是各式各样的，所以`renga-admin`提供了一个**抽象类**，你可以继承这个抽象类，然后重写`initializeRequestInterceptor`和`initializeResponseInterceptor`方法，来实现自己的请求拦截器和响应拦截器。
+因为后端的规范是各式各样的，所以`renga-admin`提供了一个**抽象类**，你可以继承这个抽象类，然后重写`initializeRequestInterceptor`和`initializeResponseInterceptor`方法，来实现自己的请求拦截器和响应拦截器。代码位于`packages/axios/index.ts`中。
 
-`rengar-admin`的示例请求的自定义请求拦截如下，你可以根据后端的实际情况来实现自己的请求拦截器
+`rengar-admin`的示例请求的自定义请求拦截如下，你可以根据后端的实际情况来实现自己的请求拦截器，代码位于`src/api/request.ts`。
 
 ```ts
 import BaseHttpClient from "@rengar-admin/axios";
@@ -28,6 +28,8 @@ class HttpClient extends BaseHttpClient {
     super(config);
   }
 
+  // 自定义请求拦截
+  // [!code ++]
   protected initializeRequestInterceptor(): number {
     return this.instance.interceptors.request.use(
       (config) => {
@@ -53,6 +55,8 @@ class HttpClient extends BaseHttpClient {
     return Promise.reject(new Error(message));
   }
 
+  // 自定义响应拦截
+  // [!code ++]
   protected initializeResponseInterceptor(): number {
     return this.instance.interceptors.response.use(
       (response) => {
