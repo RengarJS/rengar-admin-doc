@@ -12,9 +12,30 @@ packages:
   - "!**/test/**"
 ```
 
-该配置会把`packages`下的所有直接子目录作为包
+## 全局依赖
 
-由于使用了`monorepo`，安装依赖有所不同，以下是安装依赖的示例：
+在使用了了`monorepo`之后，根目录的`package.json`里面的依赖叫做**全局依赖**，所有制的子包都能直接访问，无需在子包安装
 
-- 安装`dayjs`到根目录，执行`pnpm add dayjs -w`，`-w`表示安装到根目录。
-- 安装`dayjs`到`packages/axios`，
+安装全局依赖命令如下：
+
+```shell
+pnpm add dayjs -w
+```
+
+其中`-w`不能省略。
+
+## 子包依赖
+
+子包依赖安装命令如下：
+
+一种方式是不用切换到子包的目录：
+
+```shell
+pnpm add dayjs -F @rengar-admin/axios
+```
+
+一种是切换到子包所在的目录，执行：
+
+```shell
+pnpm add dayjs
+```
