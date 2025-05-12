@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as n,ae as e}from"./chunks/framework.DDmtCRY9.js";const E=JSON.parse('{"title":"环境变量","description":"","frontmatter":{},"headers":[],"relativePath":"action/env.md","filePath":"action/env.md"}'),l={name:"action/env.md"};function t(p,s,h,k,r,d){return n(),a("div",null,s[0]||(s[0]=[e("",9)]))}const c=i(l,[["render",t]]);export{E as __pageData,c as default};
