@@ -1,5 +1,7 @@
 # monorepo 介绍
 
+请先阅读[pnpm monorepo](https://pnpm.io/zh/workspaces)详解。
+
 `monorepo` 是一个概念，它代表一个仓库中包含多个子项目，这些子项目可以共享相同的依赖，也可以共享相同的构建工具。本项目里使用基于`pnpm`的`monorepo 能力。
 
 pnpm 使用`monorepo`架构只需在根目录新建`pnpm-workspace.yaml`，`rengar-admin`的配置如下：
