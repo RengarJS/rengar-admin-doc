@@ -50,3 +50,12 @@ pnpm build
 - [icones](https://marketplace.visualstudio.com/items?itemName=afzalsayed96.icones)：图标管理与搜索工具，便于快速查找和复制 SVG 图标。
 - [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)：统一不同编辑器和 IDE 的代码风格配置。
 - [Vue VSCode Snippets](https://marketplace.visualstudio.com/items?itemName=sdras.vue-vscode-snippets)：常用 Vue 代码片段，提升开发效率。
+
+## 最佳实践
+
+首先请阅读一下全部的文档，然后参照以下步骤经行修改，快速开发
+
+1. 修改`.env.development`的`VITE_API_URL`为你自己的后端 api
+2. 修改`src/api/request.ts`的请求拦截器和响应拦截器的方法
+3. 修改`src/views/login/index.vue`的登录参数和相关的后端 api
+4. 修改`src/stores/modules/auth.ts`的逻辑，打通用户详情接口
