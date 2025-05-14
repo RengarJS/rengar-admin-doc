@@ -3,6 +3,7 @@ import { defineConfig } from "vitepress";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "rengar-admin文档",
+
   description: "开发文档",
   base: "/rengar-admin-doc/",
   markdown: {
