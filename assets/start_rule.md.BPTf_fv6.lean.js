@@ -1,0 +1,1 @@
+import{_ as s,c as a,o as i,ae as o}from"./chunks/framework.DDmtCRY9.js";const u=JSON.parse('{"title":"项目规范","description":"","frontmatter":{},"headers":[],"relativePath":"start/rule.md","filePath":"start/rule.md"}'),n={name:"start/rule.md"};function t(d,e,c,r,l,p){return i(),a("div",null,e[0]||(e[0]=[o("",22)]))}const k=s(n,[["render",t]]);export{u as __pageData,k as default};
