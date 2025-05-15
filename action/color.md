@@ -60,3 +60,36 @@ const appConfig: App.BaseConfig = {
   },
 };
 ```
+
+## 暗黑模式适配
+
+### theme 适配
+
+`rengar-admin`的暗黑模式是基于`naive-ui`的暗黑模式的，通常情况下，使用`naive-ui`的组件无需额外适配，假如你想让某个元素在特定的情况下适配暗黑模式，你直接给该元素添加`class="theme"`即可，`theme`代码位于`src/assets/styles/main.css`中，样式如下：
+
+```css
+.theme {
+  background-color: var(--n-color);
+  color: var(--n-text-color);
+  transition: color 0.3s var(--n-bezier), background-color 0.3s var(--n-bezier),
+    box-shadow 0.3s var(--n-bezier), border-color 0.3s var(--n-bezier);
+}
+```
+
+使用:
+
+```vue
+<div class="theme">这样该div就会自动适配了</div>
+```
+
+### unocss 适配
+
+`unocss`可以通过`dark:xxx`来实现暗黑模式下的样式，如：
+
+```css
+ <div class="dark:text-red">111</div>
+```
+
+### 其他
+
+当然还有一些第三方组件有自己的暗黑模式适配逻辑，这个时候你可以监听`src/stores/modules/app.ts`中的`theme`字段来判断当前是否是暗黑模式，然后自己适配。

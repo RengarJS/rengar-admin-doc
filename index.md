@@ -15,14 +15,14 @@ hero:
       link: https://rengarjs.github.io/rengar-admin/
 
 features:
-  - title: 优势
-    details: 样式美观，代码简洁，vue3.5最新特性编写，无过度封装，目录规范，无多余的依赖，文档完善，上手简单
-  - title: 技术栈
-    details: vite6 + vue3.5 + naive-ui + typescript + pnpm + monorepo + pinia + unocss + eslint + prettier
-  - title: 自动路由系统
-    details: 内置vite插件，根据文件目录自动生成路由文件
-  - title: 轻松实现keepAlive
-    details: 内置vite插件，自动注入name到.vue文件，轻松实现多级路由的keepAlive
-  - title: 健全的类型
-    details: 项目TS覆盖率100%，类型文件规范，轻松上手
+  - title: 优雅的设计
+    details: 基于 Naive UI 精心打造，界面简洁美观，完美适配暗黑模式，代码简单易懂
+  - title: 先进技术栈
+    details: 采用 Vue 3.5 + Vite 6 + TypeScript + Naive UI + Pinia + UnoCSS 等前沿技术
+  - title: 智能路由
+    details: 创新的文件系统路由，根据目录结构自动生成路由配置，让开发更加高效便捷
+  - title: 页面缓存增强
+    details: 特殊的路由缓存方案，自动注入组件名称，轻松实现多级路由的 KeepAlive 功能
+  - title: 类型安全
+    details: TypeScript 类型覆盖率 100%，配合 VS Code 享受智能提示，让代码更加健壮可靠
 ---

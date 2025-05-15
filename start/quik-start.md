@@ -37,7 +37,7 @@ pnpm build
 ## VSCode 扩展
 
 ::: tip 提示
-你无需手动去安装以上扩展，使用`vscode`打开会提示你安装推荐的扩展。
+你无需手动去安装以下扩展，使用`vscode`打开会提示你安装这些推荐的扩展。
 :::
 
 为了体验到更好的开发体验，提供了一些`vscode`扩展：
@@ -53,9 +53,9 @@ pnpm build
 
 ## 最佳实践
 
-首先请阅读一下全部的文档，然后参照以下步骤经行修改，快速开发
+首先请阅读一下全部的文档，大致了解一下`reangar-admin`的功能，然后参照以下步骤修改，快速开发
 
 1. 修改`.env.development`的`VITE_API_URL`为你自己的后端 api
 2. 修改`src/api/request.ts`的请求拦截器和响应拦截器的方法
-3. 修改`src/views/login/index.vue`的登录参数和相关的后端 api
+3. 修改`src/views/login/index.vue`的登录参数和相关的后端 api 请求、响应参数
 4. 修改`src/stores/modules/auth.ts`的逻辑，打通用户详情接口
