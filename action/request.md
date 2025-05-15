@@ -2,7 +2,7 @@
 
 ## 项目示例 api
 
-示例 api 是基于[apiFpx](https://apifox.com/)的 mock 的，所有的 CRUD 接口都没有实际的效果，仅仅只是为了演示。
+示例 api 是基于[apiFpx](https://apifox.com/) mock 的，所有接口都不会修改数据，仅仅只是为了演示。
 
 [点击查看示例文档](https://apifox.com/apidoc/shared/86037536-a9a1-453b-9bcf-28ff484cc199)，密码为`rengar-admin`，此文档会不定期更新密码。
 

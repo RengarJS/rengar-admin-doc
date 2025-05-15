@@ -9,6 +9,7 @@ export default defineConfig({
   markdown: {
     lineNumbers: true,
   },
+  lang: "zh-CN",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [

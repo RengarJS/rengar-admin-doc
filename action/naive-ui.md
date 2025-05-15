@@ -59,7 +59,7 @@ const value = ref('');
 
 然而如果你使用了 on-update:value="yyy"，Vue 会生成类似于 :onUpdate:value="xxx" :on-update:value="yyy" 的代码，然后第二个属性会在运行时覆盖掉第一个，v-model:value 会崩掉。
 
-### render 函数
+## 结合 naive-ui 使用 jsx
 
 在`naive-ui`中，到处都能看到`自定义渲染`，比如在`NDataTable`的`columns`中，你可以使用`render`来渲染自定义的内容。
 
@@ -99,3 +99,7 @@ const columns: DataTableColumns<> = [
 ]
 </script>
 ```
+
+::: tip 提示
+在使用`jsx`语法时，你需要在`script`标签中添加`lang="tsx"`，任何的组件都需要手动引入
+:::
