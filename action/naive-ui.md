@@ -103,3 +103,22 @@ const columns: DataTableColumns<> = [
 ::: tip 提示
 在使用`jsx`语法时，你需要在`script`标签中添加`lang="tsx"`，任何的组件都需要手动引入
 :::
+
+## 重置表单值
+
+在`naive-ui`中，表单的重置并没有提供原生的重置方法，你需要手动重置表单的每个项的值为`null`。
+
+```vue
+<template>
+  <n-form :model="form">
+  </n-form>
+</template>
+
+<script setup lang="ts">
+const form = reactive<Record<string, any>>({})
+function resetForm() {
+  for(const key in form) {
+    form[key] = null
+  }
+}
+```

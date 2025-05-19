@@ -59,3 +59,4 @@ pnpm build
 2. 修改`src/api/request.ts`的请求拦截器和响应拦截器的方法
 3. 修改`src/views/login/index.vue`的登录参数和相关的后端 api 请求、响应参数
 4. 修改`src/stores/modules/auth.ts`的逻辑，打通用户详情接口
+5. logo 修改： `public/favicon.ico`、`src/assets/svg-icons/logo.svg`修改为自己的 logo，文件名和格式不能改变

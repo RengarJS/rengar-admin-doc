@@ -35,3 +35,7 @@
 ::: tip 提示
 导入新图标后，需要重启项目
 :::
+
+## logo
+
+logo 修改： `public/favicon.ico`、`src/assets/svg-icons/logo.svg`修改为自己的 logo，文件名和格式不能改变。
