@@ -1,5 +1,43 @@
 # 路由系统
 
+## 路由过度效果
+
+如果默认的路由动画不好看，你可以在`src/layouts/components/common/RouterViewContent.vue`里修改。
+
+:::danger 注意
+虽然 vue3 已经支持了多个根组件，但是在启用了路由过度动画后，不能使用多个根组件，否则页面切换的时候白屏，即使是文本、注释也不可以, 也就是说`template`的第一个子元素必须是有效的 html 元素、组件。
+:::
+
+正确示例：
+
+```vue
+<template>
+  <div></div>
+</template>
+```
+
+错误示例：
+
+存在多个根标签：
+
+```vue
+<template>
+  <div></div>
+  // [!code error]
+  <div></div>
+</template>
+```
+
+注释也不行：
+
+```vue
+<template>
+  <div></div>
+  // [!code error]
+  <!-- 我是注释 -->
+</template>
+```
+
 ## 自动生成路由
 
 `rengar-admin`的路由是基于`src/views`目录自动生成路由文件，无需手动配置， 自动生成的路由文件在`src/router/routes.ts`中，自动生成的路由的`name`类型文件位于`typings/common/vite-plugin-routes.d.ts`中。
