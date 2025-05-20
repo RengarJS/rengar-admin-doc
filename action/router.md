@@ -16,6 +16,10 @@
 4. 路由的`meta`的`title`为祖先的目录命名，以`_`连接。
 5. 以`[xxx].vue`的文件，会被认为是动态路由，生成路由时，会自动生成`params`参数，如`[id].vue`会生成`/:id`
 
+::: danger 注意
+`src/views`的 `404`、`home` 、`login`文件目录不能删除，其他的目录可以删除。
+:::
+
 ### 单层路由
 
 假设`src/views`目录下有如下目录结构：
@@ -306,3 +310,25 @@ src
                                               ▼  ▼
                                          [放行][跳404]
 ```
+
+## 去除自动生成路由
+
+如果不需要自动生成路由，在`build/plugins/index.ts`移除路由插件：
+
+```ts
+export function setupVitePlugins() {
+  const plugins: PluginOption[] = [
+    setupInject(),
+    vue(),
+    vueJsx(),
+    vueDevTools(),
+    setupRouter(), // [!code --]
+    setupUnocssPlugin(),
+    ...setupAutoImportPlugin(),
+    setupVersion(),
+  ];
+  return plugins;
+}
+```
+
+就可以去`src/router/routes.ts`中手动配置路由了。
