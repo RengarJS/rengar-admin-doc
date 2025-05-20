@@ -28,9 +28,7 @@ declare interface ImportMetaEnv {
   readonly VITE_APP_PORT: string;
   readonly VITE_API_URL: string;
   readonly VITE_BASE_URL: string;
-  readonly VITE_APP_TOKEN_STORAGE: "sessionStorage" | "localStorage";
-
-  readonly 变量名: 类型;
+  readonly 变量名: 类型; // [!code ++]
 }
 ```
 
