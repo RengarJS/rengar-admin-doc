@@ -2,7 +2,7 @@
 
 ## 介绍
 
-- `rengar-admin`是基于[naive-ui](https://www.naiveui.com)开发的一个`vue3+ts`的**后台管理模板**
+- `rengar-admin`是基于[naive-ui](https://www.naiveui.com)开发的一个`vue3+ts`的**后台管理模板**， `rengar-admin`开源且免费，遵循`MIT`协议。
 
 ## 为什么开发 rengar-admin
 
@@ -32,10 +32,6 @@
 
 - ✅ts 类型覆盖率 100%
 - ✅ 全平台使用 setup 语法，使用 vue3.5 的新特性，让代码更优雅
-- ✅ 根据目录自动生成路由文件，内置 vite 插件，源码看得见
+- ✅ 内置 vite 插件，根据目录自动生成路由文件
 - ✅ 解决棘手的多级路由 keep-alive 缓存问题
 - ✅ 完善的权限系统
-
-## 灵感
-
-布局灵感来自于[soybean-admin](https://admin-docs.soybeanjs.cn/)，是一个很好看的后台模版，用它也是一个不错的选择。
