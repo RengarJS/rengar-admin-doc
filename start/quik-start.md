@@ -53,10 +53,32 @@ pnpm build
 
 ## 最佳实践
 
-首先请阅读一下全部的文档，大致了解一下`reangar-admin`的功能，然后参照以下步骤修改，快速开发
+::: tip 提示
+
+首先请阅读一下全部的文档，大致了解一下`reangar-admin`的功能，为了避免无从下手，可以参照以下步骤修改：
+
+:::
 
 1. 修改`.env.development`的`VITE_API_URL`为你自己的后端 api
-2. 修改`src/api/request.ts`的请求拦截器和响应拦截器的方法
-3. 修改`src/views/login/index.vue`的登录参数和相关的后端 api 请求、响应参数
-4. 修改`src/stores/modules/auth.ts`的逻辑，打通用户详情接口
+2. 修改`src/api/request.ts`的请求拦截器`initializeRequestInterceptor`和响应拦截器`initializeResponseInterceptor`的方法，改为适用于你的后端 api
+3. 修改`src/views/login/index.vue`和`src/stores/modules/auth.ts`中`authLoginOutAction`的登录参数和相关的后端 api 请求、响应参数，打通登录接口
+4. 修改`src/stores/modules/auth.ts`中的`authDetailAction`函数，打通获取用户详情接口，获取用户的`id`、`username`和`codes`，`codes`为该用户的所有权限的数组结合
+
+因为每个项目接口都不一样，在该方法里整理成`rengar-admin`所需要的数据格式即可：
+
+```ts
+async function authDetailAction() {
+  const [err, data] = await to(authDetailApi());
+  if (err) return Promise.reject(err);
+  user.value.id = data.id;
+  user.value.username = data.username;
+  data.codes.forEach((item) => {
+    roleMap.set(item, item);
+  });
+  return true;
+}
+```
+
 5. logo 修改： `public/favicon.ico`、`src/assets/svg-icons/logo.svg`修改为自己的 logo，文件名和格式不能改变
+6. 看看系统设置的`菜单`、`用户`、`角色`能不能满足的需求，能满足修改一下 api，不满足自己手撸吧~
+7. 开始编写其他业务吧
