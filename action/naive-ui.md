@@ -102,7 +102,7 @@ const columns: DataTableColumns<> = [
 ```
 
 ::: tip 提示
-在使用`jsx`语法时，你需要在`script`标签中添加`lang="tsx"`，在`rengar-admin`中，如果你的组件名称是`PascalCase`语法，如`NTag`，需要手动从`naive-ui`中导入，如果是`kebab-case`语法，如`n-tag`，则不需要手动导入。
+在使用`jsx`语法时，你需要在`script`标签中添加`lang="tsx"`，需要手动引入使用的组件，如`import { NTag } from "naive-ui"`。
 :::
 
 ## 重置表单值
