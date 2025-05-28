@@ -36,6 +36,7 @@ export default defineConfig({
       {
         text: "功能说明",
         items: [
+          { text: "版本日志", link: "/action/changelog" },
           { text: "目录结构", link: "/action/directory" },
           { text: "颜色", link: "/action/color" },
           { text: "图标", link: "/action/icon" },
