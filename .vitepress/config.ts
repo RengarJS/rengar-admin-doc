@@ -44,6 +44,7 @@ export default defineConfig({
           { text: "路由系统", link: "/action/router" },
           { text: "权限系统", link: "/action/auth" },
           { text: "环境变量", link: "/action/env" },
+          { text: "自动更新", link: "/action/update" },
           { text: "naive-ui", link: "/action/naive-ui" },
         ],
       },
