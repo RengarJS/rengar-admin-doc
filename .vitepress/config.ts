@@ -30,6 +30,7 @@ export default defineConfig({
           { text: "monorepo", link: "/start/monorepo" },
           { text: "项目规范", link: "/start/rule" },
           { text: "同步代码", link: "/start/sync" },
+          { text: "交流群", link: "/start/chat" },
         ],
       },
 
