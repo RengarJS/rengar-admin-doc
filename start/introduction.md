@@ -24,7 +24,7 @@
 - [naive-ui](https://www.naiveui.com/zh-CN/os-theme)
 - [pnpm](https://pnpm.io/zh)
 - [typescript](https://www.typescriptlang.org/)
-- [vite6](https://vitejs.dev/)
+- [vite7](https://vitejs.dev/)
 - [unocss](https://unocss.dev)
 - [pinia](https://pinia.vuejs.org/)
 

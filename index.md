@@ -18,7 +18,7 @@ features:
   - title: 优雅的设计
     details: 基于 Naive UI 精心打造，界面简洁美观，完美适配暗黑模式，代码简单易懂
   - title: 先进技术栈
-    details: 采用 Vue 3.5 + Vite 6 + TypeScript + Naive UI + Pinia + UnoCSS 等前沿技术
+    details: 采用 Vue 3.5 + Vite 7 + TypeScript + Naive UI + Pinia + UnoCSS 等前沿技术
   - title: 智能路由
     details: 创新的文件系统路由，根据目录结构自动生成路由配置，让开发更加高效便捷
   - title: 页面缓存增强
