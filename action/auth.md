@@ -16,12 +16,13 @@ meta: {
 
 ## 组件、按钮权限
 
-1. 可以直接使用封装好的自定义指令`v-role`来实现按钮、组件的鉴权。
+1. 可以直接使用封装好的自定义指令`v-role`来实现按钮、组件的鉴权, 参数支持`string`或`string[]`：
    ```vue
    <button v-role="['xxxx']">按钮</button>
    <custom-component v-role="['xxxx']">组件</custom-component>
    ```
 2. 也可以通过封装的`useAuth`的 hook 来实现鉴权。
+
    ```vue
    <script setup lang="ts">
    import { useAuth } from "@/hooks/auth";
@@ -30,3 +31,5 @@ meta: {
      <div v-if="useAuth('xxxx')">组件</div>
    </template>
    ```
+
+   **注意**： useAuth 是非响应式数据

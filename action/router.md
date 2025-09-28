@@ -5,7 +5,7 @@
 如果默认的路由动画不好看，你可以在`src/layouts/components/common/RouterViewContent.vue`里修改。
 
 :::danger 注意
-虽然 vue3 已经支持了多个根组件，但是在启用了路由过度动画后，不能使用多个根组件，否则页面切换的时候白屏，即使是文本、注释也不可以, 也就是说`template`的第一个子元素必须是有效的 html 元素、组件。
+虽然 vue3 已经支持了多个根组件，但是在启用了路由过度动画后，**路由组件**不能使用多个根组件，否则页面切换的时候白屏，即使是文本、注释也不可以, 也就是说`template`的第一个子元素必须是有效的 html 元素、组件。
 :::
 
 正确示例：
@@ -167,21 +167,21 @@ src
 
 ## meta 配置
 
-| 属性       | 类型            | 默认值   | 说明                                                           |
-| ---------- | --------------- | -------- | -------------------------------------------------------------- |
-| title      | string          | 自动生成 | 路由的标题，会被用于生成面包屑和菜单的名称                     |
-| layout     | "base"或"blank" | base     | 页面的布局，默认为 base                                        |
-| roles      | string[]        | -        | 权限设置                                                       |
-| icon       | string          | -        | 菜单的图标，直接使用"iconify"的图标名                          |
-| localIcon  | string          | -        | 菜单的本地图标                                                 |
-| keepAlive  | boolean         | -        | 页面是否缓存                                                   |
-| hideInMenu | boolean         | -        | 是否在菜单中隐藏                                               |
-| hideInTab  | boolean         | -        | 是否在 tab 栏中隐藏                                            |
-| activeMenu | string          | -        | 当此页面被激活时，高亮显示的菜单的 name                        |
-| constant   | boolean         | -        | 是否是常量路由，设置了该选项后，不需要登录、不需要鉴权就能访问 |
-| order      | number          | -        | 排序                                                           |
-| href       | string          | -        | 设置了会外部跳转该链接                                         |
-| fixedInTab | boolean         | -        | 是否固定在 tab 栏中                                            |
+| 属性       | 类型               | 默认值   | 说明                                                           |
+| ---------- | ------------------ | -------- | -------------------------------------------------------------- |
+| title      | string             | 自动生成 | 路由的标题，会被用于生成面包屑和菜单的名称                     |
+| layout     | "base"或"blank"    | base     | 页面的布局，默认为 base                                        |
+| roles      | string 或 string[] | -        | 权限设置                                                       |
+| icon       | string             | -        | 菜单的图标，直接使用"iconify"的图标名                          |
+| localIcon  | string             | -        | 菜单的本地图标                                                 |
+| keepAlive  | boolean            | -        | 页面是否缓存                                                   |
+| hideInMenu | boolean            | -        | 是否在菜单中隐藏                                               |
+| hideInTab  | boolean            | -        | 是否在 tab 栏中隐藏                                            |
+| activeMenu | string             | -        | 当此页面被激活时，高亮显示的菜单的 name                        |
+| constant   | boolean            | -        | 是否是常量路由，设置了该选项后，不需要登录、不需要鉴权就能访问 |
+| order      | number             | -        | 排序                                                           |
+| href       | string             | -        | 设置了会外部跳转该链接                                         |
+| fixedInTab | boolean            | -        | 是否固定在 tab 栏中                                            |
 
 ## keep-alive
 
@@ -214,7 +214,7 @@ src
   }
 ```
 
-原理： `rengar-admin`会在构建的时候自动注入`defineOptions({name: 'xxx'})`，`xxx`为当前路由的`name`。也就是说，在开发中手动设置路由组件的`name`是无效的。该自动注入插件位于`packages/vite-plugin-vue-inject-name`中。
+原理： `rengar-admin`会在构建的时候会在`.vue`文件自动注入`defineOptions({name: 'xxx'})`，`xxx`为当前路由的`name`。也就是说，在开发中手动设置路由组件的`name`是无效的。该自动注入插件位于`packages/vite-plugin-vue-inject-name`中。
 
 ## 路由跳转
 
@@ -312,3 +312,7 @@ export function setupVitePlugins() {
 ```
 
 就可以去`src/router/routes.ts`中手动配置路由了。
+
+:::danger 注意
+如果你去除了路由插件，如果要继续使用 keep-alive 功能，那么你的路由配置中的 name 必须遵循与插件自动生成的规则一致（即：路由的 name 为祖先的目录命名，以-连接）。
+:::
