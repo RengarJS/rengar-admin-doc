@@ -1,6 +1,6 @@
 import { defineConfig } from "vitepress";
 
-const base = "/rengar-admin-doc/";
+const base = "/doc/";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -18,7 +18,7 @@ export default defineConfig({
     nav: [
       { text: "首页", link: "/" },
       { text: "文档", link: "/start/introduction" },
-      { text: "在线预览", link: "https://rengarjs.github.io/rengar-admin/" },
+      { text: "在线预览", link: "https://www.rengar.site" },
     ],
 
     sidebar: [
