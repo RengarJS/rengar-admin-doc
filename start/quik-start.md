@@ -2,8 +2,8 @@
 
 ## 环境要求
 
-- [node.js](https://nodejs.org/): >= 20
-- [pnpm](https://pnpm.io/): >= 9
+- [node.js](https://nodejs.org/): >= 22
+- [pnpm](https://pnpm.io/): >= 10
 - [git](https://git-scm.com/)
 
 ## 创建项目
@@ -55,7 +55,7 @@ pnpm build
 
 ::: tip 提示
 
-首先请阅读一下全部的文档，大致了解一下`reangar-admin`的功能，为了避免无从下手，可以参照以下步骤修改：
+首先请阅读一下全部的文档，大致了解一下`reangar-admin`的功能，可以看一下后端的[接口文档](/action/request.md)，为了避免无从下手，可以参照以下步骤修改：
 
 :::
 

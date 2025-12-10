@@ -167,21 +167,23 @@ src
 
 ## meta 配置
 
-| 属性       | 类型               | 默认值   | 说明                                                           |
-| ---------- | ------------------ | -------- | -------------------------------------------------------------- |
-| title      | string             | 自动生成 | 路由的标题，会被用于生成面包屑和菜单的名称                     |
-| layout     | "base"或"blank"    | base     | 页面的布局，默认为 base                                        |
-| roles      | string 或 string[] | -        | 权限设置                                                       |
-| icon       | string             | -        | 菜单的图标，直接使用"iconify"的图标名                          |
-| localIcon  | string             | -        | 菜单的本地图标                                                 |
-| keepAlive  | boolean            | -        | 页面是否缓存                                                   |
-| hideInMenu | boolean            | -        | 是否在菜单中隐藏                                               |
-| hideInTab  | boolean            | -        | 是否在 tab 栏中隐藏                                            |
-| activeMenu | string             | -        | 当此页面被激活时，高亮显示的菜单的 name                        |
-| constant   | boolean            | -        | 是否是常量路由，设置了该选项后，不需要登录、不需要鉴权就能访问 |
-| order      | number             | -        | 排序                                                           |
-| href       | string             | -        | 设置了会外部跳转该链接                                         |
-| fixedInTab | boolean            | -        | 是否固定在 tab 栏中                                            |
+| 属性        | 类型               | 默认值   | 说明                                                                |
+| ----------- | ------------------ | -------- | ------------------------------------------------------------------- |
+| title       | string             | 自动生成 | 路由的标题，会被用于生成面包屑和菜单的名称                          |
+| layout      | "base"或"blank"    | base     | 页面的布局，默认为 base                                             |
+| roles       | string 或 string[] | -        | 权限设置                                                            |
+| icon        | string             | -        | 菜单的图标，直接使用"iconify"的图标名                               |
+| localIcon   | string             | -        | 菜单的本地图标                                                      |
+| keepAlive   | boolean            | -        | 页面是否缓存                                                        |
+| hideInMenu  | boolean            | -        | 是否在菜单中隐藏                                                    |
+| hideInTab   | boolean            | -        | 是否在 tab 栏中隐藏                                                 |
+| activeMenu  | string             | -        | 当此页面被激活时，高亮显示的菜单的 name                             |
+| constant    | boolean            | -        | 是否是常量路由，设置了该选项后，不需要登录、不需要鉴权就能访问      |
+| order       | number             | -        | 排序                                                                |
+| href        | string             | -        | 设置了会外部跳转该链接                                              |
+| fixedInTab  | boolean            | -        | 是否固定在 tab 栏中                                                 |
+| showBack    | boolean            | -        | 是否显示返回按钮，若为 true 则在 tab 栏左侧显示，tab 隐藏该选项无效 |
+| multipleTab | boolean            | -        | 同一个 name 的路由是否多开，适用于详情之类的页面                    |
 
 ## keep-alive
 

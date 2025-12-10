@@ -2,9 +2,9 @@
 
 ## 项目示例 api
 
-示例 api 是基于[apiFpx](https://apifox.com/) mock 的，所有接口都不会修改数据，仅仅只是为了演示。
+项目 api 接口是真实运行在服务器的接口，后端使用了[fastapi](https://fastapi.tiangolo.com/)来开发
 
-[点击查看示例文档](https://apifox.com/apidoc/shared/86037536-a9a1-453b-9bcf-28ff484cc199)，密码为`rengar-admin`，此文档会不定期更新密码。
+[点击查看接口文档](https://s.apifox.cn/36fc3c88-5719-4a7d-a34b-b7c89d4d1c11)，密码为`rengar-admin`，此文档会不定期更新密码。
 
 ## request 封装
 

@@ -1,5 +1,11 @@
 # 版本日志
 
+- `v2.0.0`:
+
+  - 路由 meta 新增`multipleTab`、`showBack`参数
+  - 路由动画优化
+  - 后端 api 由原来的`apifox`mock 改为真实线上接口
+
 - `v1.4.0`：
 
   - fix：修复 eslint 报错
