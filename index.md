@@ -12,9 +12,11 @@ hero:
       link: /start/introduction
     - theme: alt
       text: 在线预览
-      link: https://rengarjs.github.io/rengar-admin/
+      link: https://www.rengar.site
 
 features:
+  - title: 生产环境验证
+    details: 经过生产环境验证，确保在真实场景下的稳定性和性能
   - title: 完全免费
     details: 完全开源免费，遵循 MIT 开源协议，你可以自由使用、修改和分发
   - title: 优雅的设计
@@ -30,6 +32,4 @@ features:
 
   - title: 响应式布局
     details: 响应式布局，支持 PC、平板、手机等设备，适配多种屏幕尺寸
-  - title: 生产环境验证
-    details: 经过生产环境验证，确保在真实场景下的稳定性和性能
 ---
