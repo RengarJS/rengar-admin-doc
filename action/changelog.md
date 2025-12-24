@@ -4,7 +4,13 @@
 
   - 路由 meta 新增`multipleTab`、`showBack`参数
   - 路由动画优化
-  - 后端 api 由原来的`apifox`mock 改为真实线上接口
+  - 后端 api 由原来的`apifox`mock 改为真实线上接口，[后端项目](https://github.com/RengarJS/rengar-admin-python)
+  - .env 新增 vite proxy 代理字段
+  - 新增多种路由动画
+  - 优化暗黑模式切换闪屏
+  - 修复菜单折叠问题
+  - axios 请求代码重构，修复 token 失效不能取消 api 的问题
+  - 修复登录成功后无法跳转到之前的页面
 
 - `v1.4.0`：
 
