@@ -42,6 +42,8 @@
 
 `rengar-admin`的路由是基于`src/views`目录自动生成路由文件，无需手动配置， 自动生成的路由文件在`src/router/routes.ts`中，自动生成的路由的`name`类型文件位于`typings/common/vite-plugin-routes.d.ts`中。
 
+自动生成路由的 vite 插件位于`packages/vite-plugin-vue-routes`
+
 ::: tip 提示
 在生成的路由文件中，手动修改 meta 的配置、`redirect`配置不会被自动覆盖，其他的均会被自动覆盖。
 :::
@@ -55,7 +57,7 @@
 5. 以`[xxx].vue`的文件，会被认为是动态路由，生成路由时，会自动生成`params`参数，如`[id].vue`会生成`/:id`
 
 ::: danger 注意
-`src/views`的 `404`、`home` 、`login`文件目录不能删除，其他的目录可以删除。
+由于系统自带了默认的演示页面，在清理无关的路由页面时候，`src/views`的 `404`、`home` 、`login`文件目录不能删除，其他的目录可以删除。
 :::
 
 ### 单层路由

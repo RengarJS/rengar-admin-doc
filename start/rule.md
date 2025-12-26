@@ -45,7 +45,7 @@ pnpm remove husky lint-staged  -D
 ```
 
 ::: danger 提示
-次操作不可逆，谨慎操作！
+此操作不可逆，谨慎操作！
 :::
 
 ## ts 类型规范

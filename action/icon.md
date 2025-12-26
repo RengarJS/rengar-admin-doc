@@ -1,5 +1,9 @@
 # 图标
 
+::: danger 提示
+非常不建议使用 naive-ui 推荐的图标库[xicons](https://xicons.org/)，亲测了安装了多个图标库，直接会导致 ts 卡死，具体原因是这个图标库里有成千上万的 ts 类型文件。
+:::
+
 ## 线上图标
 
 `rengar-admin`内置了[iconify](https://icones.js.org/)的图标库，你可以直接使用这些图标。**所有图标的前缀必须以`i-`开头**。
