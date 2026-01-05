@@ -224,6 +224,17 @@ src
 
 为了路由跳转能获得类型提示，`rengar-admin`封装了自定义 hooks，位于`src/hooks/router.ts`中。
 
+自`v2.1.0`开始，路由插件会自动生成[类型化路由](https://router.vuejs.org/zh/guide/advanced/typed-routes.html)，直接使用 useRouter()即可获得类型提示。
+::: danger 提示
+加入路由类型提示，使用`useRoute()`获取路由参数`params`，必须手动加上泛型，泛型就是路由的 name，如:
+
+```ts
+const route = useRoute<"detail">();
+route.params.id;
+```
+
+:::
+
 ## 一个基本的路由示例
 
 常见的列表、新增、编辑的示例。
