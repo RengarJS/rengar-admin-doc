@@ -32,7 +32,7 @@
 
 - ✅ts 类型覆盖率 100%
 - ✅ 全平台使用 setup 语法，使用 vue3.5 的新特性，让代码更优雅
-- ✅ 内置 vite 插件，根据目录自动生成路由文件
+- ✅ 内置 vite 插件，根据目录自动生成路由文件，生成[类型路由](https://router.vuejs.org/zh/guide/advanced/typed-routes.html), 跳转都会有提示
 - ✅ 解决棘手的多级路由 keep-alive 缓存问题
 - ✅ 完善的权限系统
 - ✅ 兼容移动端
