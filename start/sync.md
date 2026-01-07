@@ -4,7 +4,7 @@
 
 1.把`rengar-admin`的仓库加入到你的项目：
 
-```base
+```bash
   git remote add template git@github.com:RengarJS/rengar-admin.git
 ```
 
