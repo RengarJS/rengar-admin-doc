@@ -5,7 +5,7 @@ const base = "/doc/";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "rengar-admin文档",
-
+  lastUpdated: true,
   description: "开发文档",
   base,
   markdown: {
@@ -14,6 +14,16 @@ export default defineConfig({
   lang: "zh-CN",
   head: [["link", { rel: "icon", href: `${base}favicon.ico` }]],
   themeConfig: {
+    lastUpdated: {
+      text: '最后更新时间'
+    },
+    editLink: {
+      text: '在GitHub上编辑此页面',
+      pattern: 'https://github.com/RengarJS/rengar-admin-doc/blob/main/:path'
+    },
+    search: {
+      provider: "local",
+    },
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: "首页", link: "/" },

@@ -44,14 +44,25 @@
  * -------------------------------------------------------------------------- */
 
 :root {
+  --primary-1: #ede9fe;
+  --primary-2: #ddd6fe;
+  --primary-3: #c4b5fd;
+  --primary-4: #a78bfa;
+  --primary-5: #8b5cf6;
+  --primary-6: #7c3aed;
+  --primary-7: #6d28d9;
+  --primary-8: #5b21b6;
+}
+
+:root {
   --vp-c-default-1: var(--vp-c-gray-1);
   --vp-c-default-2: var(--vp-c-gray-2);
   --vp-c-default-3: var(--vp-c-gray-3);
   --vp-c-default-soft: var(--vp-c-gray-soft);
 
-  --vp-c-brand-1: var(--vp-c-indigo-1);
-  --vp-c-brand-2: var(--vp-c-indigo-2);
-  --vp-c-brand-3: var(--vp-c-indigo-3);
+  --vp-c-brand-1: var(--primary-5);
+  --vp-c-brand-2: var(--primary-6);
+  --vp-c-brand-3: var(--primary-7);
   --vp-c-brand-soft: var(--vp-c-indigo-soft);
 
   --vp-c-tip-1: var(--vp-c-brand-1);
@@ -77,7 +88,7 @@
 :root {
   --vp-button-brand-border: transparent;
   --vp-button-brand-text: var(--vp-c-white);
-  --vp-button-brand-bg: var(--vp-c-brand-3);
+  --vp-button-brand-bg: var(--vp-c-brand-1);
   --vp-button-brand-hover-border: transparent;
   --vp-button-brand-hover-text: var(--vp-c-white);
   --vp-button-brand-hover-bg: var(--vp-c-brand-2);
@@ -134,6 +145,5 @@
  * -------------------------------------------------------------------------- */
 
 .DocSearch {
-  --docsearch-primary-color: var(--vp-c-brand-1) !important;
+  --docsearch-primary-color: var(--primary) !important;
 }
-
