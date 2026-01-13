@@ -10,10 +10,6 @@
 
 - 修复`pnpm type-check`类型报错问题
 
-### ⚠️ BREAKING CHANGES
-
-- 现在使用 useRoute()获取路由参数 params 的时候需要明确加上泛型，例如：`useRoute<'home'>().params`，ts 会自动校验参数是否存在
-
 ## 2.0.1
 
 ### ✨ Features

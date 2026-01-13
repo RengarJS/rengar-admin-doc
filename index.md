@@ -13,6 +13,9 @@ hero:
     - theme: alt
       text: 在线预览
       link: https://www.rengar.site
+    - theme: brand
+      text: 一杯咖啡
+      link: /start/coffee
 
 features:
   - title: 完全免费
