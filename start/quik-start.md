@@ -8,9 +8,19 @@
 
 ## 创建项目
 
+SSH 协议:
+
 ```bash
 git clone git@github.com:RengarJS/rengar-admin.git your-project-name
 ```
+
+HTTPS 协议:
+
+```bash
+git clone https://github.com/RengarJS/rengar-admin.git your-project-name
+```
+
+clone不下来的直接访问 [GitHub](https://github.com/RengarJS/rengar-admin) 来下载项目。
 
 ## 安装依赖
 
