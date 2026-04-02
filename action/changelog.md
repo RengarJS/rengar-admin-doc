@@ -1,5 +1,30 @@
 # Changelog
 
+## [2.5.0] - 2026-04-02
+
+### ✨ Features
+
+- 新增路由自定义配置，位于`src/router/config.ts`
+- 新增iconify图标自动引入
+- 新增iconify本地渲染，支持离线使用
+- 系统图标采用本地打包形式，不依赖外网
+
+## [2.4.1] - 2026-03-20
+
+### 🐛 Bug Fixes
+
+- 修复布局问题
+
+## [2.4.0] - 2026-03-20
+
+### ✨ Features
+
+- 添加`左侧双菜单`布局
+
+### 🐛 Bug Fixes
+
+- 修复`tsconfig.app.json`lib错误问题
+
 ## [2.1.0] - 2026-01-05
 
 ### ✨ Features
@@ -9,6 +34,10 @@
 ### 🐛 Bug Fixes
 
 - 修复`pnpm type-check`类型报错问题
+
+### ⚠️ BREAKING CHANGES
+
+- 现在使用useRoute()获取路由参数params的时候需要明确加上泛型，例如：`useRoute<'home'>().params`，ts会自动校验参数是否存在
 
 ## 2.0.1
 
@@ -38,4 +67,4 @@
 
 ### 🐛 Bug Fixes
 
-- 修复 eslint 在使用`unocss`的文件中报错的问题，该问题产生的原因是`unocss`各个依赖的版本不一致的问题。
+- 修复eslint在使用`unocss`的文件中报错的问题，该问题产生的原因是`unocss`各个依赖的版本不一致的问题。

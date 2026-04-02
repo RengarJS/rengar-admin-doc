@@ -235,6 +235,60 @@ route.params.id; // 有类型提示
 
 :::
 
+## 增加额外参数
+
+自`2.5.0`开始，支持额外的参数，代码位于`src/router/config.ts`中：
+
+只需在对应name的路由下定义参数即可，下面展示了使用自定义的菜单图标和自定义路由守卫的例子：
+
+```ts
+import type { Component } from "vue";
+import type { RouteRecordRaw } from "vue-router";
+
+import HomeIcon from "~icons/mingcute/home-2-line";
+import SettingIcon from "~icons/mingcute/settings-5-line";
+
+interface ExtraConfig {
+  meta: {
+    icon: Component;
+  };
+}
+
+export type ExtrarouteConfig = Partial<
+  Record<
+    RouteRecordName,
+    ExtraConfig &
+      Omit<
+        RouteRecordRaw,
+        | "name"
+        | "path"
+        | "redirect"
+        | "meta"
+        | "children"
+        | "component"
+        | "meta"
+      >
+  >
+>;
+
+export const extraRoutesConfig: ExtrarouteConfig = {
+  home: {
+    meta: {
+      icon: HomeIcon,
+    },
+    beforeEnter() {
+      console.log("router guard");
+      return true;
+    },
+  },
+  setting: {
+    meta: {
+      icon: SettingIcon,
+    },
+  },
+};
+```
+
 ## 一个基本的路由示例
 
 常见的列表、新增、编辑的示例。
